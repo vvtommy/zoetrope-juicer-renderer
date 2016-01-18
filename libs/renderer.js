@@ -4,7 +4,10 @@
 'use strict';
 
 var juicer = require('juicer');
-
+juicer.set({
+  strip:false,
+  errorhandling:false
+});
 function compile(str) {
   return juicer.compile(str).render;
 }
